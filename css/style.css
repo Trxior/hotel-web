@@ -1,36 +1,73 @@
-* {
-  margin: 0;
+*,
+*:before,
+*:after {
   padding: 0;
+  margin: 0;
   outline: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  list-style: none; }
 
 body {
+  font: 18px Roboto, Arial, sans-serif;
   background: #212121;
-  color: #f0f0ee;
-  margin: 0 auto; }
+  color: #212121; }
+
+a {
+  display: block;
+  color: #212121;
+  text-decoration: none;
+  cursor: pointer; }
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1170px; }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  padding: 10px 20px;
   width: 100%;
-  padding: 10px;
-  background: #ff3333; }
+  background: #f0f0ee;
+  border-bottom: 4px solid #880028;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25); }
+  .header__container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; }
   .header__wrapper {
-    width: 300px;
-    height: 100%;
-    margin: 10px;
-    background: #f0f0ee; }
-  .header .navigation__menu {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    list-style: none; }
-  .header .navigation__item {
-    margin: 10px;
-    padding: 10px 20px;
-    background: #ffdd33; }
-  .header .navigation__link {
-    display: block;
-    color: #212121;
-    text-decoration: none; }
+    flex: 1 1 0; }
+  .header__brand {
+    min-height: 50px; }
+  .header__menu {
+    display: none;
+    cursor: pointer; }
+  .header .navigation__item, .header .dropdown__item {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 15px; }
+    .header .navigation__item:hover .dropdown, .header .dropdown__item:hover .dropdown {
+      display: block; }
+  .header .navigation__link, .header .dropdown__link {
+    padding: 8px 14px;
+    box-shadow: 2px 2px 2px rgba(21, 21, 21, 0);
+    transition: .75s; }
+    .header .navigation__link:hover, .header .dropdown__link:hover {
+      background: #880028;
+      color: #f0f0ee;
+      box-shadow: 2px 2px 2px rgba(21, 21, 21, 0.25); }
+  .header .dropdown {
+    position: absolute;
+    min-width: 250px;
+    display: none;
+    padding-top: 20px; }
+    .header .dropdown__item {
+      display: block;
+      padding-top: 10px; }
+    .header .dropdown__link {
+      background: #f0f0ee;
+      border: solid 1px rgba(21, 21, 21, 0.25);
+      box-shadow: 2px 2px 2px rgba(21, 21, 21, 0.25); }

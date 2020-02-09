@@ -1,0 +1,45 @@
+@media (max-width: 768px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        &__contaienr {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        &__menu {
+            display: block;
+        }
+
+        .navigation {
+            display: none;
+            position: static;
+
+            &__item {
+                display: block;
+                text-align: center;
+                font-size: 18px;
+                padding: 5px 0;
+            }
+        }
+
+        .dropdown {
+            position: static;
+            padding-top: 0;
+
+            &__link {
+                border: none;
+                border-bottom: solid 2px #880028;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+//
+//.page-header .container div {
+//    flex: 1 1 100%;
+//}
