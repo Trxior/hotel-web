@@ -112,7 +112,6 @@ a {
 
 .btn {
   width: fit-content;
-  max-width: 300px;
   margin: 20px auto 10px;
   padding: 8px 24px;
   border: 2px solid #880028;
@@ -231,6 +230,28 @@ a {
     max-height: 125px;
     max-width: 125px;
     margin: 10px; }
+
+.timestamp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #212121;
+  padding: 10vh 0; }
+  .timestamp .quote {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    text-shadow: 0 0 2px rgba(21, 21, 21, 0.25);
+    padding: 0 20px; }
+    .timestamp .quote .fa-quote-left {
+      font-size: 36px; }
+    .timestamp .quote__text {
+      font-weight: 300;
+      margin: 30px 0; }
+    .timestamp .quote__author {
+      font-weight: 400; }
 
 @media (max-width: 768px) {
   body {
