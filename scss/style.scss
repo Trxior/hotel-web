@@ -192,39 +192,90 @@ a {
         max-width: 980px;
         text-align: center;
     }
+}
 
-    &__heading {
-        width: 100%;
-        text-align: center;
-        text-transform: uppercase;
-        padding-bottom: 5px;
-        font-weight: 400;
+.heading {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-weight: 400;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 2px;
+        margin: 10px auto;
+    }
+
+    &--large {
+        font-size: 28px;
 
         &:after {
-            display: block;
-            content: "";
-            height: 2px;
-            margin: 10px auto;
+            background: #880028;
+            width: 50px;
         }
+    }
 
-        &--large {
-            font-size: 28px;
+    &--medium {
+        font-size: 22px;
 
-            &:after {
-                background: #880028;
-                width: 50px;
-            }
+        &:after {
+            background: linear-gradient(to right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1), rgba(21, 21, 21, 0));
+            max-width: 350px;
+            width: 80%;
         }
+    }
+}
 
-        &--medium {
-            font-size: 24px;
+.card {
+    display: flex;
+    flex-wrap: wrap;
 
-            &:after {
-                background: linear-gradient(to right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1), rgba(21, 21, 21, 0));
-                max-width: 350px;
-                width: 80%;
-            }
-        }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        flex: 1 1 425px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .25);
+        border-radius: 4px;
+    }
+
+    &__box {
+        overflow: hidden;
+        width: 100%;
+        height: 25vh;
+    }
+
+    &__image {
+        width: 100%;
+        height: 25vh;
+        max-height: 25vh;
+        object-fit: cover;
+        transition: 1s;
+    }
+
+    &__block {
+        padding: 15px;
+        background: rgba(225, 225, 255, .25);
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 16px;
+    }
+}
+
+.features {
+    &__container {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5vh 0;
+    }
+
+    &__card {
+        max-width: 425px;
+        cursor: pointer;
     }
 }
 
