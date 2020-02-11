@@ -112,6 +112,7 @@ a {
 
 .btn {
   width: fit-content;
+  max-width: 300px;
   margin: 20px auto 10px;
   padding: 8px 24px;
   border: 2px solid #880028;
@@ -198,6 +199,38 @@ a {
 .features__card {
   max-width: 425px;
   cursor: pointer; }
+
+.promotion {
+  background: linear-gradient(rgba(90, 0, 40, 0.5), rgba(90, 0, 40, 0.5)), url("../img/mayPromotion.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+  color: #f0f0ee;
+  margin-top: 40px;
+  padding: 8vh 20px; }
+  .promotion__container {
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; }
+  .promotion__info {
+    flex: 1 1 500px;
+    max-width: 700px;
+    text-shadow: 2px 2px 4px rgba(21, 21, 21, 0.5); }
+  .promotion__cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 200px;
+    max-width: 200px; }
+  .promotion__title {
+    color: #ffdf00;
+    margin-bottom: 10px; }
+  .promotion__image {
+    max-height: 125px;
+    max-width: 125px;
+    margin: 10px; }
 
 @media (max-width: 768px) {
   body {

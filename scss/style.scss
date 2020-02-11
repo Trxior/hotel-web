@@ -279,6 +279,52 @@ a {
     }
 }
 
+.promotion {
+    background:
+        linear-gradient(rgba(90, 0, 40, .5),
+            rgba(90, 0, 40, .5)),
+        url('../img/mayPromotion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+    color: #f0f0ee;
+    margin-top: 40px;
+    padding: 8vh 20px;
+
+    &__container {
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__info {
+        flex: 1 1 500px;
+        max-width: 700px;
+        text-shadow: 2px 2px 4px rgba(21, 21, 21, .5);
+    }
+
+    &__cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1 1 200px;
+        max-width: 200px;
+    }
+
+    &__title {
+        color: #ffdf00;
+        margin-bottom: 10px;
+    }
+
+    &__image {
+        max-height: 125px;
+        max-width: 125px;
+        margin: 10px;
+    }
+}
+
 
 
 @import 'responsive';
