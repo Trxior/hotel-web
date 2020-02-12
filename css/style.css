@@ -165,6 +165,7 @@ a {
       width: 80%; }
 
 .card {
+  margin: 0 auto;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   border-radius: 4px; }
   .card__item {
@@ -186,17 +187,20 @@ a {
   .card__description {
     font-size: 16px; }
 
-.features {
+.card__container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 5vh; }
+
+.features__container {
   display: flex;
   justify-content: center;
   flex-direction: column; }
-  .features__container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-gap: 5vh; }
-  .features__card {
-    max-width: 425px;
-    cursor: pointer; }
+
+.features__card {
+  max-width: 425px;
+  cursor: pointer; }
 
 .promotion {
   background: linear-gradient(rgba(90, 0, 40, 0.5), rgba(90, 0, 40, 0.5)), url("../img/mayPromotion.png");

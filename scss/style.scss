@@ -262,15 +262,18 @@ a {
     }
 }
 
+.card__container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5vh;
+}
+
 .features {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
     &__container {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-gap: 5vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     &__card {

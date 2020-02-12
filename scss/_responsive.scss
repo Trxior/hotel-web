@@ -43,10 +43,8 @@
         }
     }
 
-    .features {
-        &__container {
-            grid-template-columns: repeat(1, auto);
-        }
+    .card__container {
+        grid-template-columns: repeat(1, auto);
     }
 
     .promotion {
