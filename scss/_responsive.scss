@@ -43,6 +43,10 @@
         }
     }
 
+    .wrapper {
+        padding: 50px 20px;
+    }
+
     .card__container {
         grid-template-columns: repeat(1, auto);
     }
