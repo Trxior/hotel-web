@@ -42,6 +42,18 @@
             }
         }
     }
+
+    .features {
+        &__container {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+
+    .promotion {
+        &__image {
+            display: none;
+        }
+    }
 }
 
 //

@@ -186,11 +186,13 @@ a {
 }
 
 .wrapper {
+    padding: 10vh 20px;
+
     &__header {
         margin: 0 auto;
-        padding: 8vh 20px 0;
         max-width: 980px;
         text-align: center;
+        margin-bottom: 10vh;
     }
 }
 
@@ -198,7 +200,6 @@ a {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 5px;
     font-weight: 400;
 
     &:after {
@@ -229,36 +230,31 @@ a {
 }
 
 .card {
-    display: flex;
-    flex-wrap: wrap;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .25);
+    border-radius: 4px;
 
     &__item {
         display: flex;
         flex-direction: column;
-        margin: 30px;
-        flex: 1 1 425px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, .25);
-        border-radius: 4px;
     }
 
     &__box {
         overflow: hidden;
         width: 100%;
-        height: 25vh;
+        height: 30vh;
     }
 
     &__image {
         width: 100%;
-        height: 25vh;
-        max-height: 25vh;
+        height: 30vh;
+        max-height: 30vh;
         object-fit: cover;
         transition: 1s;
     }
 
     &__block {
-        padding: 15px;
-        background: rgba(225, 225, 255, .25);
         text-align: center;
+        padding: 15px;
     }
 
     &__description {
@@ -267,10 +263,14 @@ a {
 }
 
 .features {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
     &__container {
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 5vh 0;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 5vh;
     }
 
     &__card {
@@ -289,8 +289,6 @@ a {
     background-position: center;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
     color: #f0f0ee;
-    margin-top: 40px;
-    padding: 8vh 20px;
 
     &__container {
         justify-content: space-around;
@@ -315,13 +313,11 @@ a {
 
     &__title {
         color: #ffdf00;
-        margin-bottom: 10px;
     }
 
     &__image {
         max-height: 125px;
         max-width: 125px;
-        margin: 10px;
     }
 }
 
@@ -331,7 +327,7 @@ a {
     justify-content: center;
     align-items: center;
     color: #212121;
-    padding: 10vh 0;
+    padding: 15vh 20px;
 
     .quote {
         text-align: center;
@@ -339,7 +335,6 @@ a {
         max-width: 900px;
         width: 100%;
         text-shadow: 0 0 2px rgba(21, 21, 21, .25);
-        padding: 0 20px;
 
         .fa-quote-left {
             font-size: 36px;
@@ -347,7 +342,7 @@ a {
 
         &__text {
             font-weight: 300;
-            margin: 30px 0;
+            padding: 20px 0;
         }
 
         &__author {
@@ -368,15 +363,14 @@ a {
     &__container {
         justify-content: center;
         flex-wrap: wrap;
-        padding-bottom: 4vh;
     }
 
     &__map {
-        padding: 8vh 20px 0;
         flex: 1 1 100%;
+        margin-bottom: 10vh;
         width: 100%;
         height: 100%;
-        min-height: 350px;
+        min-height: 300px;
         border: none;
         box-shadow: 0 0 5px rgba(21, 21, 21, .25);
     }
@@ -385,35 +379,43 @@ a {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 4vh;
         flex: 1 1 100%;
     }
 
     &__item {
         flex: 1 1 250px;
         max-width: 250px;
-        margin: 10px;
         text-align: center;
         overflow: hidden;
     }
 
     &__title {
         text-transform: uppercase;
-        font-weight: 500;
-        margin-bottom: 12px;
+        font-weight: 400;
         color: #ffdf00;
+        padding-bottom: 6px;
+        margin: 6px 20px;
+        border-bottom: 2px solid #ffdf00;
     }
 
     &__info {
-        padding-bottom: 12px;
+        padding-bottom: 6px;
         color: #F0F0EE;
         transition: .5s;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     &__link:hover &__info {
         color: #ffdf00;
     }
+}
+
+.footer {
+    background: $black;
+    padding: 8px;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
 }
 
 @import 'responsive';
