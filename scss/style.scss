@@ -135,6 +135,11 @@ a {
         }
     }
 
+    &__bg {
+        height: 40vh;
+        background-position: center;
+    }
+
     %slider-info {
         padding: 5px 10px;
         color: $white;
@@ -160,7 +165,7 @@ a {
     padding: 8px 24px;
     border: 2px solid $red;
     border-radius: 4px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, .25);
+    box-shadow: 2px 2px 10px rgba(18, 18, 18, .25);
     color: $red;
     font-size: .9rem;
     text-align: center;
@@ -231,19 +236,16 @@ a {
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-
     &__container {
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(min-content, 1fr));
         grid-gap: 5vh;
     }
-    
+
     &__item {
         height: 100%;
-        box-shadow: 0 0 8px rgba(18, 18, 18, .25);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .25);
     }
 
     &__box {
@@ -271,8 +273,14 @@ a {
     }
 }
 
+.rooms {
+    .card__container {
+        width: 100%;
+    }
+}
+
 .features {
-    .card__link {
+    .card__item {
         max-width: 425px;
     }
 }
