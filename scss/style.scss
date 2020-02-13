@@ -239,7 +239,7 @@ a {
     &__container {
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(2, minmax(min-content, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 5vh;
     }
 
@@ -274,8 +274,20 @@ a {
 }
 
 .rooms {
+    .card {
+        &__container {
+            width: 100%;
+        }
+
+        &__description {
+            font-size: 18px;
+        }
+    }
+}
+
+.attractions {
     .card__container {
-        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

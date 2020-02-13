@@ -172,7 +172,7 @@ a {
 .card__container {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, minmax(min-content, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 5vh; }
 
 .card__item {
@@ -201,6 +201,12 @@ a {
 
 .rooms .card__container {
   width: 100%; }
+
+.rooms .card__description {
+  font-size: 18px; }
+
+.attractions .card__container {
+  grid-template-columns: repeat(3, 1fr); }
 
 .features .card__item {
   max-width: 425px; }
