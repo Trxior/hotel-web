@@ -101,7 +101,7 @@ a {
 
         &__link {
             @extend .navigation__link;
-            background: #f0f0ee;
+            background: $white;
             border: solid 1px rgba(21, 21, 21, .25);
             box-shadow: 2px 2px 2px rgba(21, 21, 21, .25);
         }
@@ -243,8 +243,18 @@ a {
         padding: 0 5vh;
     }
 
-    &__info {
-        font-size: 16px;
+    &__title {
+        width: max-content;
+        display: block;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        padding-bottom: 5px;
+        border-bottom: solid 2px $red;
+        margin-bottom: 5px;
+    }
+    
+    &__text {
         line-height: 1.5em;
     }
 
@@ -254,21 +264,25 @@ a {
         justify-content: center;
         overflow: hidden;
         box-shadow: 0 0 10px rgba(0, 0, 0, .25);
-
-        &:hover .hotel__item {
-            max-width: 25px;
-
-            &:hover {
-                max-width: 400px;
-            }
-        }
     }
 
     &__item {
-        object-fit: cover;
-        max-width: 300px;
+        max-width: 150px;
         height: 300px;
-        transition: 1s;
+        object-fit: cover;
+        transition: all 1s ease-in;
+
+        &:first-of-type:hover {
+            transform: translateX(125px);
+        }
+
+        &:last-of-type:hover {
+            transform: translateX(-125px);
+        }
+
+        &:hover {
+            max-width: 400px;
+        }
     }
 }
 
@@ -365,7 +379,7 @@ a {
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
-    color: #f0f0ee;
+    color: $white;
 
     &__container {
         justify-content: space-around;
@@ -435,7 +449,7 @@ a {
         url('../img/hotel-map.jpeg');
     background-size: cover;
     background-position: center;
-    color: #f0f0ee;
+    color: $white;
 
     &__container {
         justify-content: center;
@@ -478,7 +492,7 @@ a {
 
     &__info {
         padding-bottom: 6px;
-        color: #F0F0EE;
+        color: $white;
         transition: .5s;
         font-size: 15px;
     }
