@@ -146,6 +146,8 @@ a {
     max-width: 980px;
     text-align: center;
     margin-bottom: 10vh; }
+  .wrapper__description {
+    font-size: 16px; }
 
 .heading {
   width: 100%;
@@ -171,8 +173,8 @@ a {
 
 .hotel__container {
   display: grid;
-  grid-template-columns: auto 450px;
-  grid-gap: 5vh;
+  grid-template-columns: 450px auto;
+  grid-gap: 10vh;
   padding: 0 5vh; }
 
 .hotel__title {
@@ -180,32 +182,39 @@ a {
   display: block;
   text-transform: uppercase;
   font-size: 24px;
-  font-weight: 500;
-  padding-bottom: 5px;
-  border-bottom: solid 2px #880028;
-  margin-bottom: 5px; }
+  margin-bottom: 20px;
+  font-weight: 300;
+  position: relative; }
+  .hotel__title:before {
+    content: '';
+    z-index: -1;
+    width: 75%;
+    height: 10px;
+    background: #ffdd33;
+    position: absolute;
+    left: -20px;
+    bottom: 0; }
 
 .hotel__text {
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  font-size: 16px;
+  font-weight: 300; }
 
 .hotel__slider {
-  height: 300px;
+  max-width: 450px;
+  max-height: 300px;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+  justify-content: center; }
+  .hotel__slider:hover .hotel__item {
+    max-width: 25px; }
+    .hotel__slider:hover .hotel__item:hover {
+      max-width: 400px; }
 
 .hotel__item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   max-width: 150px;
-  height: 300px;
   object-fit: cover;
-  transition: all 1s ease-in; }
-  .hotel__item:first-of-type:hover {
-    transform: translateX(125px); }
-  .hotel__item:last-of-type:hover {
-    transform: translateX(-125px); }
-  .hotel__item:hover {
-    max-width: 400px; }
+  transition: 1s; }
 
 .card__container {
   margin: 0 auto;
