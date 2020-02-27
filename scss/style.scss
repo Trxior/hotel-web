@@ -164,7 +164,6 @@ a {
     margin-top: 20px;
     padding: 8px 24px;
     border: 2px solid $red;
-    border-radius: 4px;
     box-shadow: 2px 2px 10px rgba(18, 18, 18, .25);
     color: $red;
     font-size: .9rem;
@@ -244,7 +243,6 @@ a {
         display: grid;
         grid-template-columns: 450px auto;
         grid-gap: 10vh;
-        padding: 0 5vh;
     }
 
     &__title {
@@ -276,7 +274,7 @@ a {
 
     &__slider {
         max-width: 450px;
-        max-height: 300px;
+        height: 300px;
         display: flex;
         justify-content: center;
 
@@ -344,6 +342,10 @@ a {
         &__description {
             font-size: 18px;
         }
+        
+        .btn {
+            max-width: 100%;
+        }
     }
 }
 
@@ -391,6 +393,7 @@ a {
     background-position: center;
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
     color: $white;
+    margin-top: 5vh;
 
     &__container {
         justify-content: space-around;
