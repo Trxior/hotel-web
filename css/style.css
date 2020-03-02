@@ -168,7 +168,7 @@ a {
     .heading--medium:after {
       background: linear-gradient(to right, rgba(21, 21, 21, 0), #151515, rgba(21, 21, 21, 0));
       max-width: 350px;
-      width: 80%; }
+      width: 100%; }
 
 .hotel__container {
   display: grid;
@@ -176,21 +176,21 @@ a {
   grid-gap: 10vh; }
 
 .hotel__title {
-  width: max-content;
-  display: block;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 22px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 300; }
+
+.hotel__catchy {
   position: relative; }
-  .hotel__title:before {
+  .hotel__catchy:before {
     content: '';
     z-index: -1;
-    width: 75%;
+    width: calc(100% + 10px);
     height: 10px;
     background: #ffdd33;
     position: absolute;
-    left: -20px;
+    left: -5px;
     bottom: 0; }
 
 .hotel__text {
@@ -260,21 +260,28 @@ a {
   text-align: center;
   max-width: 1040px; }
   .single-room__equipment {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5vh;
-    align-items: center;
-    justify-content: center; }
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 16px; }
   .single-room__tile {
+    max-width: 200px;
+    width: 200px;
     display: block;
-    border: solid 2px #880028;
-    padding: 5vh; }
+    margin: 20px; }
+    .single-room__tile img {
+      max-width: 64px;
+      max-height: 64px; }
 
 .attractions .card__container {
   grid-template-columns: repeat(3, 1fr); }
 
-.features .card__item {
-  max-width: 425px; }
+.features {
+  padding-top: 0px; }
+  .features .card__item {
+    max-width: 425px; }
 
 .promotion {
   background: linear-gradient(rgba(90, 0, 40, 0.5), rgba(90, 0, 40, 0.5)), url("../img/mayPromotion.png");
@@ -282,8 +289,7 @@ a {
   background-size: cover;
   background-position: center;
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  margin-top: 5vh; }
+  color: #fff; }
   .promotion__container {
     justify-content: space-around;
     align-items: center;
@@ -300,31 +306,25 @@ a {
     flex: 1 1 200px;
     max-width: 200px; }
   .promotion__title {
-    color: #ffdf00; }
+    color: #ffdf00;
+    margin-bottom: 10px; }
   .promotion__image {
     max-height: 125px;
     max-width: 125px; }
 
-.timestamp {
+.timestamp .quote {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #212121;
-  padding: 15vh 20px; }
-  .timestamp .quote {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 900px;
-    width: 100%;
-    text-shadow: 0 0 2px rgba(21, 21, 21, 0.25); }
-    .timestamp .quote .fa-quote-left {
-      font-size: 36px; }
-    .timestamp .quote__text {
-      font-weight: 300;
-      padding: 20px 0; }
-    .timestamp .quote__author {
-      font-weight: 400; }
+  text-shadow: 0 0 2px rgba(21, 21, 21, 0.25); }
+  .timestamp .quote .fa-quote-left {
+    font-size: 36px; }
+  .timestamp .quote__text {
+    font-weight: 300;
+    padding: 20px 0; }
+  .timestamp .quote__author {
+    font-weight: 400; }
 
 .contact {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../img/hotel-map.jpeg");
@@ -369,7 +369,7 @@ a {
     color: #ffdf00; }
 
 .footer {
-  background: #212121;
+  background: #121212;
   padding: 8px;
   color: #fff;
   text-align: center;
