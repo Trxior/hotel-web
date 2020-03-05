@@ -142,7 +142,7 @@ a {
   padding: 10vh 20px; }
   .wrapper__header {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1170px;
     text-align: center;
     margin-bottom: 7.5vh; }
   .wrapper__description {
@@ -169,9 +169,11 @@ a {
   .heading--medium {
     font-size: 22px; }
     .heading--medium:after {
-      background: linear-gradient(to right, rgba(21, 21, 21, 0), #151515, rgba(21, 21, 21, 0));
-      max-width: 350px;
-      width: 100%; }
+      border-bottom: dashed 2px #212121;
+      height: 0;
+      max-width: 350px; }
+    .heading--medium-white:after {
+      border-bottom: dashed 2px #fff; }
 
 .hotel__container {
   display: grid;
@@ -248,6 +250,7 @@ a {
   font-size: 16px; }
 
 .rooms .card__container {
+  grid-template-columns: repeat(3, 1fr);
   width: 100%; }
 
 .rooms .card__description {
@@ -258,49 +261,64 @@ a {
 
 .single-room {
   margin: 0 auto;
-  max-width: 1040px; }
-  .single-room .container {
-    display: grid;
-    grid-template-rows: repeat(1fr);
-    grid-gap: 8vh 0; }
-  .single-room__header {
-    text-align: left; }
-  .single-room__grid {
-    display: grid;
-    grid-template-columns: auto 400px;
-    grid-gap: 5vh; }
+  max-width: 1170px;
+  padding-bottom: 2.5vh; }
+  .single-room__info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px; }
+    .single-room__info-item {
+      padding: 4px 6px;
+      margin-right: 12px;
+      background: #ddd; }
   .single-room .heading--large {
     text-align: left; }
     .single-room .heading--large:after {
       width: 100px;
       margin: 10px 0; }
+  .single-room__description {
+    text-align: justify;
+    padding-bottom: 7.5vh; }
   .single-room__slider {
-    height: 225px;
-    width: 400px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
+    display: flex;
+    justify-content: flex-end;
+    height: calc(225px + 7.5vh);
+    width: calc(400px + 7.5vh);
+    float: right; }
+    .single-room__slider-box {
+      height: 225px;
+      width: 400px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
     .single-room__slider-item {
       height: 225px;
       width: 400px;
       object-fit: cover; }
-  .single-room__equipment {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: lowercase; }
-  .single-room__tile {
+  .single-room:after {
+    display: block;
+    content: '';
+    clear: both; }
+
+.equipment {
+  background: #880028;
+  color: #fff; }
+  .equipment__container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 25px;
+    justify-content: center; }
+  .equipment__item {
     max-width: 200px;
     width: 200px;
-    height: 180px;
-    padding: 20px;
+    padding: 0 20px;
     text-align: center; }
-    .single-room__tile img {
-      max-width: 64px;
-      max-height: 64px; }
+  .equipment__icon {
+    max-width: 64px;
+    max-height: 64px; }
+  .equipment__description {
+    margin-top: 5px;
+    font-weight: 500;
+    text-transform: lowercase; }
 
 .attractions .card__container {
   grid-template-columns: repeat(3, 1fr); }

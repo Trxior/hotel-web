@@ -195,7 +195,7 @@ a {
 
     &__header {
         margin: 0 auto;
-        max-width: 1040px;
+        max-width: 1170px;
         text-align: center;
         margin-bottom: 7.5vh;
     }
@@ -236,9 +236,13 @@ a {
         font-size: 22px;
 
         &:after {
-            background: linear-gradient(to right, rgba(21, 21, 21, 0), rgba(21, 21, 21, 1), rgba(21, 21, 21, 0));
+            border-bottom: dashed 2px $black;
+            height: 0;
             max-width: 350px;
-            width: 100%;
+        }
+
+        &-white:after {
+            border-bottom: dashed 2px $white;
         }
     }
 }
@@ -342,6 +346,7 @@ a {
 .rooms {
     .card {
         &__container {
+            grid-template-columns: repeat(3, 1fr);
             width: 100%;
         }
 
@@ -357,22 +362,19 @@ a {
 
 .single-room {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1170px;
+    padding-bottom: 2.5vh;
 
-    .container {
-        display: grid;
-        grid-template-rows: repeat(1fr);
-        grid-gap: 8vh 0;
-    }
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
 
-    &__header {
-        text-align: left;
-    }
-
-    &__grid {
-        display: grid;
-        grid-template-columns: auto 400px;
-        grid-gap: 5vh;
+        &-item {
+            padding: 4px 6px;
+            margin-right: 12px;
+            background: #ddd;
+        }
     }
 
     .heading--large {
@@ -384,11 +386,24 @@ a {
         }
     }
 
+    &__description {
+        text-align: justify;
+        padding-bottom: 7.5vh;
+    }
+
     &__slider {
-        height: 225px;
-        width: 400px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+        display: flex;
+        justify-content: flex-end;
+        height: calc(225px + 7.5vh);
+        width: calc(400px + 7.5vh);
+        float: right;
+
+        &-box {
+            height: 225px;
+            width: 400px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+        }
 
         &-item {
             height: 225px;
@@ -397,28 +412,40 @@ a {
         }
     }
 
-    &__equipment {
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
+    &:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+}
+
+.equipment {
+    background: $red;
+    color: $white;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-gap: 25px;
         justify-content: center;
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: lowercase;
     }
 
-    &__tile {
+    &__item {
         max-width: 200px;
         width: 200px;
-        height: 180px;
-        padding: 20px;
+        padding: 0 20px;
         text-align: center;
+    }
 
-        img {
-            max-width: 64px;
-            max-height: 64px;
-        }
+    &__icon {
+        max-width: 64px;
+        max-height: 64px;
+    }
+
+    &__description {
+        margin-top: 5px;
+        font-weight: 500;
+        text-transform: lowercase;
     }
 }
 
