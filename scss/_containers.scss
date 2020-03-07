@@ -1,0 +1,64 @@
+
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.wrapper {
+    padding: 10vh 20px;
+
+    &__header {
+        margin: 0 auto;
+        max-width: 1170px;
+        text-align: center;
+        margin-bottom: 5vh;
+    }
+
+    &__description {
+        font-size: 16px;
+        margin-top: 10px;
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+
+    &:after {
+        display: block;
+        content: "";
+        height: 2px;
+        margin: 10px auto;
+    }
+
+    &--large {
+        font-size: 28px;
+
+        &:after {
+            background: #880028;
+            width: 50px;
+        }
+    }
+
+    &--medium {
+        font-size: 22px;
+
+        &:after {
+            border-bottom: dashed 2px $black;
+            height: 0;
+            max-width: 350px;
+        }
+
+        &-white:after {
+            border-bottom: dashed 2px $white;
+        }
+    }
+}
