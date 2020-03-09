@@ -1,4 +1,7 @@
-.content {
+.article {
+    .wrapper__header {
+        margin-bottom: 0;
+    }
 
     .heading--large {
         text-align: left;
@@ -9,13 +12,7 @@
         }
     }
 
-    &__grid {
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-gap: 5vh;
-    }
-
-    &__description {
+    &__text {
         text-align: justify;
     }
 }
@@ -35,7 +32,6 @@
 }
 
 .gallery {
-    padding: 0 20px 10vh;
     .heading {
         margin-bottom: 5vh;
     }
