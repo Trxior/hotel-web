@@ -59,6 +59,12 @@
     }
 }
 
+.gallery {
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .features {
     .card__item {
         max-width: 425px;

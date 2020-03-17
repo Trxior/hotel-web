@@ -1,9 +1,10 @@
 .hero {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     position: relative;
     height: 80vh;
+    max-height: 800px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -27,7 +28,7 @@
 
     &__bg {
         height: 40vh;
-        background-position: center;
+        max-height: 400px;
     }
 
     %hero-info {
@@ -108,13 +109,14 @@
 
 .promotion {
     background:
-        linear-gradient(rgba(90, 0, 40, .4),
-            rgba(90, 0, 40, .4)),
+        linear-gradient(rgba(90, 0, 40, .5),
+            rgba(90, 0, 40, .5)),
         url('../img/mayPromotion.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: $white;
+    padding: 75px 20px;
 
     &__container {
         justify-content: space-around;
@@ -140,11 +142,11 @@
     &__title {
         color: #ffdf00;
         margin-bottom: 10px;
-        font-size: 32px;
+        font-size: 24px;
     }
 
     &__description {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     &__image {

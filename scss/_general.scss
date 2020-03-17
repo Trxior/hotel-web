@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 *,
 *:before,
 *:after {
@@ -9,7 +11,7 @@
 }
 
 body {
-    font: 16px Roboto, Arial, sans-serif;
+    font: 16px Poppins, Arial, sans-serif;
     background: $white;
     color: $black;
 }
@@ -41,14 +43,12 @@ a {
     }
 
     &-primary {
-        background: $blue;
-        border: 2px solid $blue;
+        border: 2px solid $white;
         color: $white;
-        border-radius: 100px;
 
         &:hover {
             background: $white;
-            color: $blue;
+            color: $red;
         }
     }
 }
