@@ -180,7 +180,7 @@ a {
 .attractions .card__container {
   grid-template-columns: repeat(3, 1fr); }
 
-.gallery .card__container {
+.special .card__container {
   grid-template-columns: repeat(3, 1fr); }
 
 .features .card__item {
@@ -351,13 +351,14 @@ a {
   background: #880028;
   color: #fff; }
   .equipment__container {
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-gap: 5vh;
-    justify-content: center; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 980px; }
   .equipment__item {
-    max-width: 175px;
-    width: 175px;
+    padding: 2.5vh;
+    max-width: 200px;
+    width: 200px;
     text-align: center; }
   .equipment__icon {
     max-width: 64px;
