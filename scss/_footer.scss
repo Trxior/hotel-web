@@ -33,11 +33,11 @@
 
     &__box {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, 200px);
         justify-content: center;
         grid-gap: $padding/4;
     }
-    
+
     &__item {
         display: grid;
         grid-template-columns: 1fr 10fr;

@@ -140,10 +140,13 @@ a {
       box-shadow: 2px 2px 2px rgba(21, 21, 21, 0.25); }
 
 .card__container {
-  margin: 0 auto;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px; }
+  grid-template-columns: repeat(auto-fill, minmax(auto, 425px));
+  grid-gap: 50px;
+  justify-content: center; }
+  .card__container--xs {
+    grid-template-columns: repeat(auto-fill, minmax(auto, 350px)); }
 
 .card__item {
   height: 100%;
@@ -169,25 +172,30 @@ a {
 .card__description {
   font-size: 16px; }
 
-.rooms .card__container {
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%; }
-
 .rooms .card__description {
   font-size: 18px; }
 
 .rooms .card .btn {
   max-width: 100%; }
 
-.attractions .card__container {
-  grid-template-columns: repeat(3, 1fr); }
+/*
+.attractions {
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-.special .card__container {
-  grid-template-columns: repeat(3, 1fr); }
+.special {
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
-.features .card__container {
-  max-width: 900px; }
-
+.features {
+    .card__container {
+        max-width: 900px;
+    }
+}*/
 .hero {
   background-repeat: no-repeat;
   background-size: cover;
@@ -358,13 +366,13 @@ a {
   .equipment__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 980px;
     margin: -25px auto; }
   .equipment__item {
     margin: 25px;
-    max-width: 150px;
-    width: 150px;
+    max-width: 175px;
+    width: 175px;
     text-align: center; }
   .equipment__icon {
     max-width: 64px;
@@ -400,7 +408,7 @@ a {
 
 .contact__box {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, 200px);
   justify-content: center;
   grid-gap: 25px; }
 
@@ -464,8 +472,6 @@ a {
       border: none;
       border-bottom: solid 2px #880028;
       box-shadow: none; }
-  .card__container {
-    grid-template-columns: 1fr; }
   .hotel__container {
     grid-template-columns: 1fr; }
   .promotion {
@@ -473,7 +479,7 @@ a {
   .contact__container {
     grid-template-columns: 1fr; }
   .contact__box {
-    grid-template-columns: repeat(auto-fill, 200px); }
+    align-items: flex-start; }
   .contact__item {
     grid-template-columns: 1fr;
     text-align: center; }
