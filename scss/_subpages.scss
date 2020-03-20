@@ -33,13 +33,13 @@
 
 .gallery {
     > .heading {
-        margin-bottom: 5vh;
+        margin-bottom: $padding/2;
     }
 
     &__slider {
         display: grid;
         grid-template-columns: auto auto;
-        grid-gap: 5vh;
+        grid-gap: $padding/2;
         max-height: calc(((1170px - 5vh) / 2) * 0.5625);
         overflow: hidden;
 
@@ -61,12 +61,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
         max-width: 980px;
+        margin: -25px auto;
     }
 
     &__item {
-        padding: 2.5vh;
-        max-width: 200px;
-        width: 200px;
+        margin: 25px;
+        max-width: 150px;
+        width: 150px;
         text-align: center;
     }
 

@@ -19,27 +19,30 @@
 
 .contact {
     &__container {
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        grid-gap: $padding/2;
     }
 
     &__map {
-        flex: 1 1 auto;
-        width: 100%;
         height: 100%;
         min-height: 300px;
-        margin-right: 5vh;
         border: none;
         box-shadow: 0 0 5px rgba(21, 21, 21, .25);
     }
 
     &__box {
-        flex: 1 1 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        grid-gap: $padding/4;
     }
-
+    
     &__item {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        grid-gap: 10px;
         align-items: center;
-        margin: 20px 0;
         font-size: 14px;
         transition: 1s;
 
@@ -61,12 +64,7 @@
         height: 40px;
         width: 40px;
         border-radius: 40px;
-        margin-right: 10px;
         transition: 1s;
-    }
-
-    &__text {
-        min-width: 100px;
     }
 
     &__title {

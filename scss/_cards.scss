@@ -3,7 +3,7 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5vh;
+        grid-gap: $padding/2;
     }
 
     &__item {
@@ -66,7 +66,7 @@
 }
 
 .features {
-    .card__item {
-        max-width: 425px;
+    .card__container {
+        max-width: 900px;
     }
 }
