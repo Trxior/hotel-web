@@ -38,9 +38,10 @@
 
     &__slider {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(auto-fill, minmax(auto, 425px));
+        grid-template-rows: 1fr;
         grid-gap: $padding/2;
-        max-height: calc(((1170px - 5vh) / 2) * 0.5625);
+        justify-content: center;
         overflow: hidden;
 
         &-item {
