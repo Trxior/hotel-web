@@ -14,6 +14,8 @@
     }
 
     .header {
+        padding: 0;
+
         &__container {
             flex-direction: column;
             align-items: stretch;
@@ -21,6 +23,7 @@
 
         &__wrapper {
             flex: 1 1 100%;
+            padding: 10px 20px;
         }
 
         &__menu {
@@ -31,16 +34,17 @@
             display: none;
             position: static;
             flex: 1 1 100%;
+            border-top: 4px solid $red;
 
             &__item {
                 display: block;
                 text-align: center;
                 font-size: 18px;
-                padding: 5px 0;
+                margin: 10px;
             }
         }
 
-        .dropdown {
+        /*        .dropdown {
             position: static;
             padding-top: 0;
 
@@ -49,7 +53,7 @@
                 border-bottom: solid 2px #880028;
                 box-shadow: none;
             }
-        }
+        }*/
     }
 
     .hotel {

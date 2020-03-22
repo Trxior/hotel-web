@@ -29,6 +29,7 @@
 
     &__menu {
         display: none;
+        font-size: 20px;
         cursor: pointer;
     }
 
@@ -56,7 +57,7 @@
         }
     }
 
-    .dropdown {
+/*    .dropdown {
         position: absolute;
         min-width: 250px;
         display: none;
@@ -74,5 +75,5 @@
             border: solid 1px rgba(21, 21, 21, .25);
             box-shadow: 2px 2px 2px rgba(21, 21, 21, .25);
         }
-    }
+    }*/
 }
