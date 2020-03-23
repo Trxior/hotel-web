@@ -7,7 +7,7 @@
         justify-content: center;
 
         &--xs {
-            grid-template-columns: repeat(auto-fill, minmax(auto, 350px));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
     }
 
@@ -32,6 +32,9 @@
     }
 
     &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
         padding: 15px;
     }
@@ -52,22 +55,3 @@
         }
     }
 }
-
-/*
-.attractions {
-    .card__container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.special {
-    .card__container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.features {
-    .card__container {
-        max-width: 900px;
-    }
-}*/

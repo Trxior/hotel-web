@@ -29,6 +29,7 @@
     &__bg {
         height: 40vh;
         max-height: 400px;
+        text-transform: uppercase;
     }
 
     %hero-info {
@@ -52,15 +53,24 @@
 .hotel {
     &__container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(450px, auto));
-        grid-gap: $padding/2;
+        grid-template-columns: repeat(auto-fill, minmax(425px, auto));
+        grid-gap: $padding/4;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            margin: 20px 0 0 0;
+        }
     }
 
     &__title {
         text-transform: uppercase;
         font-size: 22px;
-        margin-bottom: 10px;
         font-weight: 300;
+        margin-bottom: 10px;
     }
 
     &__catchy {
@@ -121,13 +131,12 @@
     padding: ($padding - 25px) 20px;
 
     &__container {
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-gap: $padding/8;
     }
 
     &__info {
-        flex: 1 1 500px;
         max-width: 800px;
         text-shadow: 2px 2px 4px $black;
     }
@@ -136,8 +145,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex: 1 1 250px;
-        max-width: 250px;
     }
 
     &__title {

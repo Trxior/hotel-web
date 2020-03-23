@@ -37,14 +37,12 @@
     }
 
     &__slider {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(auto, 425px));
-        grid-template-rows: 1fr;
-        grid-gap: $padding/2;
-        justify-content: center;
+        max-width: 980px;
         overflow: hidden;
 
         &-item {
+            min-height: 275px;
+            max-height: 275px;
             height: 100%;
             width: 100%;
             object-fit: cover;
@@ -62,13 +60,13 @@
         flex-wrap: wrap;
         justify-content: center;
         max-width: 980px;
-        margin: -25px auto;
+        margin: -$padding/4 auto;
     }
 
     &__item {
-        margin: 25px;
-        max-width: 175px;
-        width: 175px;
+        margin: $padding/4;
+        max-width: 150px;
+        width: 150px;
         text-align: center;
     }
 

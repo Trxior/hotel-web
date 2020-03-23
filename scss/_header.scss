@@ -38,10 +38,6 @@
             display: inline-block;
             text-transform: uppercase;
             font-size: 14px;
-
-            &:hover .dropdown {
-                display: block;
-            }
         }
 
         &__link {
@@ -56,24 +52,4 @@
             }
         }
     }
-
-/*    .dropdown {
-        position: absolute;
-        min-width: 250px;
-        display: none;
-        padding-top: 20px;
-
-        &__item {
-            @extend .navigation__item;
-            display: block;
-            padding-top: 10px;
-        }
-
-        &__link {
-            @extend .navigation__link;
-            background: $white;
-            border: solid 1px rgba(21, 21, 21, .25);
-            box-shadow: 2px 2px 2px rgba(21, 21, 21, .25);
-        }
-    }*/
 }
