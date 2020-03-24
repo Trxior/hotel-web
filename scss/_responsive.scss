@@ -56,36 +56,42 @@
         }
     }
 
-    .promotion {
-        text-align: center;
-
+    .hotel {
         &__container {
             grid-template-columns: 1fr;
         }
     }
 
-    .timestamp {
-        .quote {
-            font-size: 16px;
-        }
-    }
-
-    .contact {
-        &__container {
-            grid-template-columns: 1fr;
-        }
-
-        &__box {
-            align-items: flex-start;
-        }
-
-        &__item {
-            grid-template-columns: 1fr;
+        .promotion {
             text-align: center;
+
+            &__container {
+                grid-template-columns: 1fr;
+            }
         }
 
-        &__icon {
-            margin: 0 auto;
+        .timestamp {
+            .quote {
+                font-size: 16px;
+            }
+        }
+
+        .contact {
+            &__container {
+                grid-template-columns: 1fr;
+            }
+
+            &__box {
+                align-items: flex-start;
+            }
+
+            &__item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            &__icon {
+                margin: 0 auto;
+            }
         }
     }
-}
